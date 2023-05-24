@@ -14,6 +14,16 @@
 		96858C8C2A1B6967000272C7 /* Floor_Plan_CepatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858C8B2A1B6967000272C7 /* Floor_Plan_CepatTests.swift */; };
 		96858C962A1B6967000272C7 /* Floor_Plan_CepatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858C952A1B6967000272C7 /* Floor_Plan_CepatUITests.swift */; };
 		96858C982A1B6967000272C7 /* Floor_Plan_CepatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858C972A1B6967000272C7 /* Floor_Plan_CepatUITestsLaunchTests.swift */; };
+		96858CA62A1B6D7B000272C7 /* FloorPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858CA52A1B6D7B000272C7 /* FloorPlan.swift */; };
+		96858CA82A1B6DDC000272C7 /* FloorPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858CA72A1B6DDC000272C7 /* FloorPlanView.swift */; };
+		96858CAC2A1B77F4000272C7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858CAB2A1B77F4000272C7 /* Router.swift */; };
+		96858CAF2A1B78DF000272C7 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858CAE2A1B78DF000272C7 /* CameraView.swift */; };
+		96858CB12A1B796C000272C7 /* FloorPlanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858CB02A1B796C000272C7 /* FloorPlanListView.swift */; };
+		96858CB42A1B7F25000272C7 /* FloorPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858CB32A1B7F25000272C7 /* FloorPlans.swift */; };
+		96858CB62A1BC9C4000272C7 /* RouterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858CB52A1BC9C4000272C7 /* RouterFeature.swift */; };
+		96858CB82A1C92EC000272C7 /* RoomCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858CB72A1C92EC000272C7 /* RoomCaptureViewController.swift */; };
+		96858CBB2A1CA833000272C7 /* RoomCaptureViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858CBA2A1CA833000272C7 /* RoomCaptureViewControllerRepresentable.swift */; };
+		96858CBF2A1CDC13000272C7 /* RoomCaptureBridgeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96858CBE2A1CDC13000272C7 /* RoomCaptureBridgeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +54,17 @@
 		96858C912A1B6967000272C7 /* Floor Plan CepatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Floor Plan CepatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96858C952A1B6967000272C7 /* Floor_Plan_CepatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor_Plan_CepatUITests.swift; sourceTree = "<group>"; };
 		96858C972A1B6967000272C7 /* Floor_Plan_CepatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor_Plan_CepatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		96858CA52A1B6D7B000272C7 /* FloorPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorPlan.swift; sourceTree = "<group>"; };
+		96858CA72A1B6DDC000272C7 /* FloorPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorPlanView.swift; sourceTree = "<group>"; };
+		96858CAB2A1B77F4000272C7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		96858CAE2A1B78DF000272C7 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		96858CB02A1B796C000272C7 /* FloorPlanListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorPlanListView.swift; sourceTree = "<group>"; };
+		96858CB32A1B7F25000272C7 /* FloorPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorPlans.swift; sourceTree = "<group>"; };
+		96858CB52A1BC9C4000272C7 /* RouterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterFeature.swift; sourceTree = "<group>"; };
+		96858CB72A1C92EC000272C7 /* RoomCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCaptureViewController.swift; sourceTree = "<group>"; };
+		96858CB92A1C95CC000272C7 /* Floor-Plan-Cepat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Floor-Plan-Cepat-Info.plist"; sourceTree = SOURCE_ROOT; };
+		96858CBA2A1CA833000272C7 /* RoomCaptureViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCaptureViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		96858CBE2A1CDC13000272C7 /* RoomCaptureBridgeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCaptureBridgeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +115,12 @@
 		96858C792A1B6966000272C7 /* Floor Plan Cepat */ = {
 			isa = PBXGroup;
 			children = (
+				96858CB92A1C95CC000272C7 /* Floor-Plan-Cepat-Info.plist */,
+				96858CB22A1B7F1D000272C7 /* Redux */,
+				96858CAD2A1B78D5000272C7 /* Camera */,
+				96858CAA2A1B77DC000272C7 /* Router */,
+				96858CA92A1B6ECC000272C7 /* FloorPlanList */,
+				96858CA42A1B6D6B000272C7 /* FloorPlan */,
 				96858C7A2A1B6966000272C7 /* Floor_Plan_CepatApp.swift */,
 				96858C7C2A1B6966000272C7 /* ContentView.swift */,
 				96858C7E2A1B6967000272C7 /* Assets.xcassets */,
@@ -125,6 +152,51 @@
 				96858C972A1B6967000272C7 /* Floor_Plan_CepatUITestsLaunchTests.swift */,
 			);
 			path = "Floor Plan CepatUITests";
+			sourceTree = "<group>";
+		};
+		96858CA42A1B6D6B000272C7 /* FloorPlan */ = {
+			isa = PBXGroup;
+			children = (
+				96858CA52A1B6D7B000272C7 /* FloorPlan.swift */,
+				96858CA72A1B6DDC000272C7 /* FloorPlanView.swift */,
+			);
+			path = FloorPlan;
+			sourceTree = "<group>";
+		};
+		96858CA92A1B6ECC000272C7 /* FloorPlanList */ = {
+			isa = PBXGroup;
+			children = (
+				96858CB02A1B796C000272C7 /* FloorPlanListView.swift */,
+			);
+			path = FloorPlanList;
+			sourceTree = "<group>";
+		};
+		96858CAA2A1B77DC000272C7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				96858CAB2A1B77F4000272C7 /* Router.swift */,
+				96858CB52A1BC9C4000272C7 /* RouterFeature.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		96858CAD2A1B78D5000272C7 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				96858CAE2A1B78DF000272C7 /* CameraView.swift */,
+				96858CB72A1C92EC000272C7 /* RoomCaptureViewController.swift */,
+				96858CBA2A1CA833000272C7 /* RoomCaptureViewControllerRepresentable.swift */,
+				96858CBE2A1CDC13000272C7 /* RoomCaptureBridgeController.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		96858CB22A1B7F1D000272C7 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				96858CB32A1B7F25000272C7 /* FloorPlans.swift */,
+			);
+			path = Redux;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +330,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				96858C7D2A1B6966000272C7 /* ContentView.swift in Sources */,
+				96858CA62A1B6D7B000272C7 /* FloorPlan.swift in Sources */,
+				96858CA82A1B6DDC000272C7 /* FloorPlanView.swift in Sources */,
+				96858CAF2A1B78DF000272C7 /* CameraView.swift in Sources */,
+				96858CB82A1C92EC000272C7 /* RoomCaptureViewController.swift in Sources */,
+				96858CBB2A1CA833000272C7 /* RoomCaptureViewControllerRepresentable.swift in Sources */,
+				96858CBF2A1CDC13000272C7 /* RoomCaptureBridgeController.swift in Sources */,
+				96858CB62A1BC9C4000272C7 /* RouterFeature.swift in Sources */,
 				96858C7B2A1B6966000272C7 /* Floor_Plan_CepatApp.swift in Sources */,
+				96858CAC2A1B77F4000272C7 /* Router.swift in Sources */,
+				96858CB42A1B7F25000272C7 /* FloorPlans.swift in Sources */,
+				96858CB12A1B796C000272C7 /* FloorPlanListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +502,8 @@
 				DEVELOPMENT_TEAM = G85YYYKRLS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Floor-Plan-Cepat-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "For LiDAR";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +533,8 @@
 				DEVELOPMENT_TEAM = G85YYYKRLS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Floor-Plan-Cepat-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "For LiDAR";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
