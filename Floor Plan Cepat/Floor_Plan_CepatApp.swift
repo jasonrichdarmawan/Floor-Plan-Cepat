@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct Floor_Plan_CepatApp: App {
     var body: some Scene {
-        let router = Router(path: NavigationPath([Router.Feature.CameraView]))
+        let router = Router(path: NavigationPath([Router.Feature.FloorPlanListView]))
         let floorPlans = FloorPlans(FloorPlans_: [FloorPlan(title: "Studento L20/2")])
         let roomCaptureBridgeController = RoomCaptureBridgeController()
         

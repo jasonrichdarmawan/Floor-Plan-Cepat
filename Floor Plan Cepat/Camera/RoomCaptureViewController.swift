@@ -11,11 +11,6 @@ import RoomPlan
 class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, RoomCaptureSessionDelegate {
     var RoomCaptureBridgeController_: RoomCaptureBridgeController!
     
-//    @IBOutlet var exportButton: UIButton?
-    
-//    @IBOutlet var doneButton: UIBarButtonItem?
-//    @IBOutlet var cancelButton: UIBarButtonItem?
-    
     private var isScanning: Bool = false
     
     private var roomCaptureView: RoomCaptureView!
@@ -37,6 +32,16 @@ class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, Room
         roomCaptureView.captureSession.delegate = self
         roomCaptureView.delegate = self
         
+        // bug fix: the roomCaptureView is next to the Indicator bar if we use RoomCaptureViewControllerRepresentable in ZStack without ignoreSafeArea(.all)
+        /*
+         ZStack {
+             RoomCaptureViewControllerRepresentable()
+         }
+         */
+        // Adjust the Y position by adding a vertical offset
+        let verticalOffset: CGFloat = -100 // Modify this value as needed
+        roomCaptureView.frame = CGRect(x: 0, y: verticalOffset, width: view.bounds.width, height: view.bounds.height)
+        
         view.insertSubview(roomCaptureView, at: 0)
     }
     
@@ -53,8 +58,6 @@ class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, Room
     private func startSession() {
         isScanning = true
         roomCaptureView?.captureSession.run(configuration: roomCaptureSessionConfig)
-        
-        setActiveNavBar()
     }
     
     private func stopSession() {
@@ -66,6 +69,12 @@ class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, Room
     
     // Decide to post-process and show the final results.
     func captureView(shouldPresent roomDataForProcessing: CapturedRoomData, error: Error?) -> Bool {
+        // bug fix: roomCaptureView can invoke .captureSession.stop() when the user put the phone face down.
+        stopSession()
+        
+#if DEBUG
+        print("\(#function) invoked")
+#endif
         return true
     }
     
@@ -77,13 +86,8 @@ class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, Room
     func doneScanning() {
         print("\(#function) invoked")
         if isScanning { stopSession() }
-//        else { cancelScanning() }
     }
 
-//    @IBAction func cancelScanning(_ sender: UIBarButtonItem) {
-//        navigationController?.dismiss(animated: true)
-//    }
-    
     // Export the USDZ output by specifying the `.parametric` export option.
     // Alternatively, `.mesh` exports a nonparametric file and `.all`
     // exports both in a single USDZ.
@@ -108,31 +112,12 @@ class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, Room
             activityVC.modalPresentationStyle = .popover
             
             present(activityVC, animated: true, completion: nil)
-//            if let popOver = activityVC.popoverPresentationController {
-//                popOver.sourceView = self.exportButton
-//            }
         } catch {
             print("Error = \(error)")
         }
     }
     
-    private func setActiveNavBar() {
-//        UIView.animate(withDuration: 1.0, animations: {
-//            self.cancelButton?.tintColor = .white
-//            self.doneButton?.tintColor = .white
-//            self.exportButton?.alpha = 0.0
-//        }, completion: { complete in
-//            self.exportButton?.isHidden = true
-//        })
-    }
-    
     private func setCompleteNavBar() {
         self.RoomCaptureBridgeController_.ExportButtonHidden_ = false
-//        self.exportButton?.isHidden = false
-//        UIView.animate(withDuration: 1.0) {
-//            self.cancelButton?.tintColor = .systemBlue
-//            self.doneButton?.tintColor = .systemBlue
-//            self.exportButton?.alpha = 1.0
-//        }
     }
 }

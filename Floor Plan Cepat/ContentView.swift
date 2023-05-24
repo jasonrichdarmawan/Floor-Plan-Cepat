@@ -24,7 +24,6 @@ struct ContentView: View {
                 .navigationDestination(for: Router.Feature.self) { destination in
                     switch destination {
                     case .FloorPlanListView:
-                        // TODO: how to hide navigationBarBackButton empty view.
                         FloorPlanListView()
                             .navigationTitle("Daftar Floor Plan")
                             .navigationBarBackButtonHidden(true)
@@ -33,18 +32,33 @@ struct ContentView: View {
                         // to hide navigationTitle
                         // by inlining the navigation title with the navigation bar back button
                             .navigationBarTitleDisplayMode(.inline)
+                            .navigationBarBackButtonHidden(true)
                             .toolbar(content: {
-                                ToolbarItem(placement: .navigationBarTrailing, content: {
+                                ToolbarItem(placement: .navigationBarLeading, content: {
                                     Button(
                                         action: {
-                                            // TODO: execute RoomCaptureViewController.doneScanning
-                                            self.roomCaptureBridgeController_.RoomCaptureViewController_.doneScanning()
+                                            self.router_.Path_.removeLast()
                                         },
                                         label: {
-                                            Text("Done")
+                                            Image(systemName: "chevron.left")
                                         }
                                     )
                                 })
+                                ToolbarItem(placement: .navigationBarLeading, content: {
+                                    TextField("Nama Floor Plan?", text: self.$roomCaptureBridgeController_.FloorPlanTitle_)
+                                })
+                                if self.roomCaptureBridgeController_.ExportButtonHidden_ {
+                                    ToolbarItem(placement: .navigationBarTrailing, content: {
+                                        Button(
+                                            action: {
+                                                self.roomCaptureBridgeController_.RoomCaptureViewController_.doneScanning()
+                                            },
+                                            label: {
+                                                Text("Done")
+                                            }
+                                        )
+                                    })
+                                }
                             })
                     }
                 }

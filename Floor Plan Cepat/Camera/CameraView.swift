@@ -21,14 +21,8 @@ struct CameraView: View {
     
     var body: some View {
         ZStack {
-            RoomCaptureViewControllerRepresentable().ignoresSafeArea(.all)
+            RoomCaptureViewControllerRepresentable()
             VStack {
-                TextField("Nama Floor Plan?", text: self.$roomCaptureBridgeController_.FloorPlanTitle_)
-                    .font(.largeTitle)
-                    .bold()
-                    .padding()
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(8)
                 Spacer()
                 if !self.roomCaptureBridgeController_.ExportButtonHidden_ {
                     Button(action: {
@@ -42,7 +36,6 @@ struct CameraView: View {
                             .background(.blue)
                             .cornerRadius(32)
                     })
-                    .preferredColorScheme(.dark)
                 }
             }
         }.onAppear {
@@ -50,6 +43,9 @@ struct CameraView: View {
             print("\(String(describing: CameraView.self)) appeared")
 #endif
         }.onDisappear {
+            // bug fix: the export button is shown after "Tambah Floor Plan" > "Done" > "Daftar Floor Plan" > "Tambah Floor Plan"
+            self.roomCaptureBridgeController_.ExportButtonHidden_ = true
+            
 #if DEBUG
             print("\(String(describing: CameraView.self)) disappeared")
 #endif
