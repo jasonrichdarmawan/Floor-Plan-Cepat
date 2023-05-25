@@ -32,15 +32,16 @@ class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, Room
         roomCaptureView.captureSession.delegate = self
         roomCaptureView.delegate = self
         
-        // bug fix: the roomCaptureView is next to the Indicator bar if we use RoomCaptureViewControllerRepresentable in ZStack without ignoreSafeArea(.all)
+        // known bug: the roomCaptureView is not aware of the Export button. So roomCaptureView may overlap with the Export button.
+        // hot fix: the roomCaptureView is next to the Indicator bar if we use RoomCaptureViewControllerRepresentable in ZStack without ignoreSafeArea(.all)
         /*
          ZStack {
              RoomCaptureViewControllerRepresentable()
          }
          */
         // Adjust the Y position by adding a vertical offset
-        let verticalOffset: CGFloat = -100 // Modify this value as needed
-        roomCaptureView.frame = CGRect(x: 0, y: verticalOffset, width: view.bounds.width, height: view.bounds.height)
+        let verticalOffset: CGFloat = SafeAreaInsets.IPHONE_14_PRO_MAX.Potrait_.top // Modify this value as needed
+        roomCaptureView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height - verticalOffset)
         
         view.insertSubview(roomCaptureView, at: 0)
     }
